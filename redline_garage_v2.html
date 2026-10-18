@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0c0f">
+<title>Redline Garage — Automotive Encyclopedia</title>
+<style>
+:root{--bg:#090b0e;--panel:#12161c;--panel2:#1a2028;--line:#2a323d;--text:#f4f6f8;--muted:#a4afbd;--hot:#ff5a36;--hot2:#ff8a45;--ok:#7bd9a6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}a{color:inherit;text-decoration:none}button{cursor:pointer}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#090b0eee;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:950;letter-spacing:1.4px}.brand b{color:var(--hot)}nav{display:flex;gap:20px;flex-wrap:wrap}nav a{color:var(--muted);font-size:.92rem}nav a:hover{color:white}.hero{min-height:490px;display:flex;align-items:center;background:linear-gradient(90deg,#090b0ef2 0%,#090b0eb8 52%,#090b0e44 100%),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=88') center 56%/cover;border-bottom:1px solid var(--line)}.hero-inner{padding:72px 0;max-width:760px}.eyebrow{color:var(--hot2);font-size:.76rem;letter-spacing:2.3px;text-transform:uppercase;font-weight:850}.hero h1{font-size:clamp(2.8rem,8vw,6rem);line-height:.93;letter-spacing:-.045em;margin:16px 0}.hero h1 span{color:var(--hot)}.hero p{max-width:600px;color:#d2d7df;font-size:1.06rem}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:24px}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:11px 16px;border-radius:8px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn.primary{background:var(--hot);border-color:var(--hot);color:white}.btn:hover{filter:brightness(1.1)}.btn.small{padding:7px 10px;font-size:.88rem}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:600px;margin-top:32px}.stat{padding:12px 15px;background:#10141bbd;border:1px solid #ffffff1c;border-radius:9px}.stat strong{display:block;font-size:1.2rem}.stat span{font-size:.8rem;color:var(--muted)}main{padding:34px 0 65px}.section{margin-top:42px;scroll-margin-top:90px}.section:first-child{margin-top:0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px}.section-head h2{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.15;margin:5px 0 0}.muted{color:var(--muted)}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.field{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:11px 12px;color:var(--text);min-width:0}.toolbar input{flex:1;min-width:190px}.toolbar select{min-width:150px}.car-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.car-card{overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:13px;transition:transform .18s,border-color .18s}.car-card:hover{transform:translateY(-3px);border-color:#647080}.car-card img{display:block;width:100%;height:185px;object-fit:cover;background:var(--panel2)}.car-content{padding:16px}.tag{display:inline-flex;background:#3b211b;color:#ffb29d;border-radius:30px;padding:4px 9px;font-size:.75rem;font-weight:800}.car-content h3{font-size:1.18rem;margin:9px 0 5px}.car-content p{font-size:.91rem;color:var(--muted);min-height:44px;margin:0}.chips{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}.chip{background:var(--panel2);padding:5px 8px;border-radius:6px;font-size:.78rem;color:#dfe4ea}.card-actions{display:flex;gap:8px;flex-wrap:wrap}.parts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.part-card{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:17px}.part-card .emoji{font-size:1.7rem}.part-card h3{margin:8px 0 4px}.part-card p{color:var(--muted);font-size:.92rem;margin:0}.compare-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px}.compare-box,.editor-box,.info-box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}.compare-picks{display:grid;grid-template-columns:1fr 1fr;gap:10px}.compare-table{width:100%;border-collapse:collapse;margin-top:15px}.compare-table th,.compare-table td{text-align:left;border-bottom:1px solid var(--line);padding:10px 7px;vertical-align:top;font-size:.91rem}.compare-table th{color:var(--muted);font-weight:650}.editor-box details>summary{font-weight:850;cursor:pointer}.editor-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.editor-form label{display:flex;flex-direction:column;gap:5px;color:var(--muted);font-size:.83rem}.editor-form .wide{grid-column:1/-1}.editor-form textarea{min-height:85px;resize:vertical}.editor-actions{display:flex;gap:9px;flex-wrap:wrap;grid-column:1/-1}.notice{font-size:.83rem;color:var(--muted);line-height:1.55}.about{padding:22px;background:linear-gradient(135deg,#171b22,#101318);border:1px solid var(--line);border-radius:12px}.about p{color:var(--muted)}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.84rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+dialog{width:min(800px,calc(100% - 24px));max-height:88vh;overflow:auto;background:var(--panel);color:var(--text);border:1px solid #47515f;border-radius:14px;padding:22px}dialog::backdrop{background:#000c;backdrop-filter:blur(5px)}.dialog-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.dialog-top h2{margin:6px 0}.dialog-image{width:100%;max-height:300px;object-fit:cover;border-radius:9px;margin-top:12px}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.detail-panel{padding:14px;border-radius:9px;background:var(--panel2)}.detail-panel h3{margin:0 0 8px}.detail-panel p,.detail-panel li{color:#d0d6df}.part-map{display:grid;grid-template-columns:1fr 1fr;gap:10px}.diagram{position:relative;min-height:250px;border:1px solid var(--line);border-radius:12px;background:radial-gradient(ellipse at center,#242c37,#0f1217 70%);overflow:hidden;display:flex;align-items:center;justify-content:center}.car-silhouette{width:85%;max-width:400px}.pin{position:absolute;width:29px;height:29px;border:2px solid white;border-radius:50%;background:var(--hot);color:white;font-weight:900;box-shadow:0 0 0 5px #ff5a3638}.pin[data-part="engine"]{top:34%;left:23%}.pin[data-part="turbo"]{top:22%;left:34%}.pin[data-part="brakes"]{bottom:24%;left:20%}.pin[data-part="suspension"]{bottom:23%;right:21%}.pin[data-part="battery"]{top:23%;right:23%}.pin[data-part="transmission"]{top:46%;left:47%}.diagram-list{display:grid;gap:8px}.diagram-item{display:block;text-align:left;width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:8px;color:var(--text);padding:11px}.diagram-item b{color:var(--hot2)}.diagram-item.active{border-color:var(--hot)}.selected-note{margin-top:10px;padding:13px;background:#241b19;border:1px solid #623226;border-radius:9px}.empty{padding:22px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);grid-column:1/-1}.hidden{display:none!important}
+@media(max-width:820px){.car-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.parts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:430px}.part-map{grid-template-columns:1fr}.compare-layout{grid-template-columns:1fr}}
+@media(max-width:560px){.wrap{width:calc(100% - 26px)}.nav{padding:13px 0;align-items:flex-start;flex-direction:column;gap:8px}nav{gap:14px}.hero{min-height:400px}.hero-inner{padding:55px 0}.stats{grid-template-columns:1fr 1fr}.car-grid,.parts-grid{grid-template-columns:1fr}.car-card img{height:210px}.editor-form,.detail-grid{grid-template-columns:1fr}.editor-form .wide,.editor-actions{grid-column:auto}.compare-picks{grid-template-columns:1fr 1fr}.compare-table th,.compare-table td{font-size:.8rem;padding:8px 4px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <!-- CUSTOMIZE: website brand -->
+  <a class="brand" href="#home">REDLINE <b>GARAGE</b></a>
+  <nav><a href="#cars">Cars</a><a href="#parts">Parts guide</a><a href="#compare">Compare</a><a href="#editor">My collection</a></nav>
+</div></header>
+
+<section class="hero" id="home"><div class="wrap hero-inner">
+  <div class="eyebrow">Automotive encyclopedia · Edition 01</div>
+  <!-- CUSTOMIZE: hero headline and intro -->
+  <h1>ENGINEERED TO<br><span>EXCITE.</span></h1>
+  <p>A cinematic guide to performance cars, the machines beneath their bodywork, and the engineering that makes every drive possible.</p>
+  <div class="actions"><a class="btn primary" href="#cars">Explore cars ↘</a><a class="btn" href="#parts">Learn the parts</a></div>
+  <div class="stats"><div class="stat"><strong id="heroCarCount">0</strong><span>Cars in collection</span></div><div class="stat"><strong>6+</strong><span>Core components</span></div><div class="stat"><strong>100%</strong><span>Your project</span></div></div>
+</div></section>
+
+<main class="wrap">
+<section class="section" id="cars">
+ <div class="section-head"><div><div class="eyebrow">The collection</div><h2>Discover the machines</h2></div><span class="muted" id="resultCount" aria-live="polite"></span></div>
+ <div class="toolbar"><input class="field" id="search" type="search" placeholder="Search name, brand, engine…" aria-label="Search cars"><select class="field" id="category" aria-label="Filter category"><option value="all">All categories</option><option>Sports</option><option>Supercar</option><option>Muscle</option><option>Performance</option><option>Electric</option></select><select class="field" id="sort" aria-label="Sort cars"><option value="featured">Featured order</option><option value="name">Name A–Z</option><option value="power">Power (numeric)</option></select></div>
+ <div class="car-grid" id="carGrid"></div>
+</section>
+
+<section class="section" id="parts">
+ <div class="section-head"><div><div class="eyebrow">Know your machine</div><h2>Parts & systems guide</h2></div><span class="muted">Select a car to view its notes</span></div>
+ <div class="parts-grid" id="partsGrid"></div>
+</section>
+
+<section class="section" id="compare">
+ <div class="section-head"><div><div class="eyebrow">Head to head</div><h2>Compare two cars</h2></div><span class="muted">Specs depend on version and year</span></div>
+ <div class="compare-box">
+  <div class="compare-picks"><label>Car A<br><select class="field" id="compareA" style="width:100%;margin-top:5px"></select></label><label>Car B<br><select class="field" id="compareB" style="width:100%;margin-top:5px"></select></label></div>
+  <div id="compareResult"></div>
+ </div>
+</section>
+
+<section class="section" id="editor">
+ <div class="section-head"><div><div class="eyebrow">Your garage</div><h2>Add, edit & back up cars</h2></div></div>
+ <div class="editor-box">
+  <details open>
+   <summary id="formTitle">＋ Add a car to your collection</summary>
+   <p class="notice">Changes save in this browser on this device using local storage. They do not automatically update the public site for everyone. To publish shared updates, edit the file and upload the changed version to your hosting service.</p>
+   <form id="carForm" class="editor-form">
+    <input type="hidden" id="editId">
+    <label>Car name<input class="field" id="fName" required placeholder="e.g. Honda Civic Type R"></label>
+    <label>Brand<input class="field" id="fBrand" required placeholder="e.g. Honda"></label>
+    <label>Category<select class="field" id="fCategory"><option>Sports</option><option>Supercar</option><option>Muscle</option><option>Performance</option><option>Electric</option></select></label>
+    <label>Engine / powertrain<input class="field" id="fEngine" required placeholder="e.g. 2.0L turbo inline-four"></label>
+    <label>Power (as published)<input class="field" id="fPower" placeholder="e.g. 315 hp"></label>
+    <label>Top speed (as published)<input class="field" id="fSpeed" placeholder="e.g. 275 km/h"></label>
+    <label class="wide">Image URL (optional)<input class="field" id="fImage" type="url" placeholder="https://…"></label>
+    <label class="wide">Short description<textarea class="field" id="fDescription" required placeholder="What makes this car special?"></textarea></label>
+    <label class="wide">Parts notes (one per line: Part name: what it does)<textarea class="field" id="fParts" placeholder="Turbocharger: compresses intake air&#10;Brakes: slow the vehicle"></textarea></label>
+    <div class="editor-actions"><button class="btn primary" type="submit" id="saveCarBtn">Save car</button><button class="btn hidden" type="button" id="cancelEdit">Cancel edit</button><button class="btn" type="button" id="exportBtn">Export backup JSON</button><label class="btn" for="importFile">Import JSON backup</label><input class="hidden" id="importFile" type="file" accept=".json,application/json"></div>
+   </form>
+  </details>
+  <div style="margin-top:20px"><h3 style="margin-bottom:8px">Your saved cars</h3><div id="manageList"></div></div>
+ </div>
+</section>
+
+<section class="section about" id="about"><div class="eyebrow">Built by a car enthusiast</div><h2>Learn the machine. Shape the collection.</h2><p>This is a customizable starter project. Replace the sample content, add reliable sources, and make the design yours. Specifications are examples, not a substitute for checking the exact model year, trim and market.</p><p class="notice">Privacy note: this static site has no accounts or server-side database. Browser-saved edits stay in that browser unless exported. Anyone who can open a public website can view its published content.</p></section>
+</main>
+<footer><div class="wrap footer-inner"><span>REDLINE GARAGE · Independent car encyclopedia project</span><span>Verify technical specifications before publishing.</span></div></footer>
+
+<dialog id="carDialog"><div class="dialog-top"><div><div class="eyebrow">Vehicle profile</div><h2 id="dialogTitle"></h2></div><button class="btn small" id="closeDialog">Close ✕</button></div><div id="dialogBody"></div></dialog>
+
+<script>
+/* =========================
+   EASY EDIT ZONE
+   Add, remove or change the sample cars here.
+   Use accurate specs for the exact year/trim/market and cite your sources on your site.
+   ========================= */
+const starterCars = [
+ {id:"gtr-r35",name:"Nissan GT-R R35",brand:"Nissan",category:"Performance",engine:"3.8L twin-turbo V6",power:"565 hp (selected US versions)",powerValue:565,speed:"About 315 km/h (version-dependent)",image:"https://images.unsplash.com/photo-1614200187524-dc4b892acf16?auto=format&fit=crop&w=1000&q=85",description:"An all-wheel-drive performance icon known for strong acceleration and a sophisticated drivetrain.",parts:[["VR38DETT engine","A hand-assembled 3.8-litre twin-turbo V6 in the R35."],["Twin turbochargers","Use exhaust energy to compress intake air."],["ATTESA E-TS AWD","An electronically controlled system that can send drive to all four wheels."],["Dual-clutch transmission","Two clutches help make gear changes quick."],["Brakes","Disc brakes and performance pads convert motion into heat."],["Suspension","Springs, dampers and links control wheel movement and body motion."]]},
+ {id:"gr-supra",name:"Toyota GR Supra",brand:"Toyota",category:"Sports",engine:"2.0L turbo I4 / 3.0L turbo I6 (market-dependent)",power:"Varies by engine and model year",powerValue:0,speed:"Varies by version",image:"https://images.unsplash.com/photo-1632245889029-e406faaa34cd?auto=format&fit=crop&w=1000&q=85",description:"A rear-wheel-drive sports coupe with turbocharged engine options and a focus on handling.",parts:[["Turbocharged engine","Uses a turbocharger to increase intake air density."],["Intercooler","Cools compressed intake air before it enters the engine."],["Rear-wheel drive","Driving force is delivered to the rear wheels."],["Differential","Allows driven wheels to rotate at different speeds in a corner."],["Suspension","Helps balance ride comfort, grip and body control."],["Brake system","Pads, discs, calipers and hydraulics slow the car."]]},
+ {id:"mustang",name:"Ford Mustang",brand:"Ford",category:"Muscle",engine:"Engine options vary by generation",power:"Varies by version",powerValue:0,speed:"Varies by version",image:"https://images.unsplash.com/photo-1584345604476-8ec5f82d7187?auto=format&fit=crop&w=1000&q=85",description:"An iconic American performance car family offered in several engines, trims and body styles.",parts:[["Engine","Produces torque and rotational power."],["Transmission","Provides gear ratios for different speeds and loads."],["Driveshaft","Transfers rotation to the differential in many layouts."],["Differential","Allows driven wheels to rotate at different speeds."],["Exhaust system","Routes gases away and helps manage noise and emissions."],["Tyres","Provide the contact patch for braking, steering and acceleration."]]},
+ {id:"911",name:"Porsche 911",brand:"Porsche",category:"Sports",engine:"Rear-mounted flat-six on many versions",power:"Varies by generation and trim",powerValue:0,speed:"Varies by version",image:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=85",description:"A long-running sports-car family with a distinctive silhouette and a renowned rear-engine layout.",parts:[["Flat-six engine","Horizontally opposed cylinders sit on either side of the crankshaft."],["Crankshaft","Converts piston motion into rotation."],["Cooling system","Keeps components within their intended temperature range."],["PDK transmission","A dual-clutch transmission available on many versions."],["Aerodynamics","Body shape and active elements manage airflow."],["Stability control","Helps manage vehicle motion when grip is limited."]]},
+ {id:"mclaren-720s",name:"McLaren 720S",brand:"McLaren",category:"Supercar",engine:"4.0L twin-turbo V8",power:"710 bhp (published rating)",powerValue:710,speed:"Model-specific",image:"https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=1000&q=85",description:"A mid-engine supercar designed around low weight, high power and aerodynamic performance.",parts:[["Twin-turbo V8","Combines eight cylinders with turbocharging."],["Carbon-fibre tub","A stiff, lightweight passenger-cell structure."],["Active rear wing","Can contribute to aerodynamic balance and braking."],["Brake system","Performance braking hardware manages heat and deceleration."],["Double-wishbone suspension","Helps engineers control wheel movement."],["Air intakes","Guide air for engine cooling and thermal management."]]},
+ {id:"bmw-m5",name:"BMW M5",brand:"BMW",category:"Performance",engine:"Varies by generation; newer versions may be hybrid",power:"Varies by generation",powerValue:0,speed:"Varies by version",image:"https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1000&q=85",description:"A high-performance executive sedan blending everyday practicality with performance engineering.",parts:[["Powertrain","Engine and transmission deliver power to the wheels."],["Turbocharger","Uses exhaust energy to compress intake air."],["AWD system","On equipped generations, manages torque to the wheels."],["Differential","Manages wheel-speed differences and torque delivery."],["Cooling pack","Heat exchangers manage engine and drivetrain temperatures."],["Drive modes","Change selected vehicle settings depending on model."]]}
+];
+const partGuide=[
+ ["⚙️","Engine","Converts fuel or electrical energy into mechanical power that moves the vehicle."],
+ ["🌀","Turbocharger","Uses exhaust energy to compress incoming air, allowing more air into the engine."],
+ ["🔋","Battery","Supplies electricity for starting and electronics; EVs use high-voltage traction batteries."],
+ ["🔧","Transmission","Provides ratios that help the engine or motor work effectively across speeds."],
+ ["🛑","Brakes","Use friction or other braking methods to slow the vehicle and manage speed."],
+ ["🛞","Suspension & tyres","Help absorb road bumps, maintain tyre contact and support steering and grip."]
+];
+const STORAGE_KEY="redlineGarageCars_v2";
+const clone=value=>JSON.parse(JSON.stringify(value));
+let cars=clone(starterCars);
+try{const saved=localStorage.getItem(STORAGE_KEY);if(saved){const parsed=JSON.parse(saved);if(Array.isArray(parsed))cars=parsed;}}catch(e){console.warn("Could not load browser-saved cars.",e)}
+const $=id=>document.getElementById(id);
+const esc=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(cars));return true}catch(e){alert("Could not save in this browser. Export a JSON backup instead.");return false}}
+function safeImage(url){try{const parsed=new URL(url,location.href);return ["http:","https:"].includes(parsed.protocol)?parsed.href:""}catch{return ""}}
+function renderCars(){
+ let list=cars.filter(c=>[c.name,c.brand,c.engine,c.description,c.category].join(" ").toLowerCase().includes($("search").value.toLowerCase().trim())&&($("category").value==="all"||c.category===$("category").value));
+ if($("sort").value==="name")list.sort((a,b)=>a.name.localeCompare(b.name));
+ if($("sort").value==="power")list.sort((a,b)=>(Number(b.powerValue)||0)-(Number(a.powerValue)||0));
+ $("heroCarCount").textContent=cars.length;$("resultCount").textContent=`${list.length} of ${cars.length} cars`;
+ $("carGrid").innerHTML=list.length?list.map(c=>{const img=safeImage(c.image);return `<article class="car-card">${img?`<img src="${esc(img)}" alt="${esc(c.name)}" loading="lazy" onerror="this.style.display='none'">`:""}<div class="car-content"><span class="tag">${esc(c.category)}</span><h3>${esc(c.name)}</h3><p>${esc(c.description)}</p><div class="chips"><span class="chip">${esc(c.engine)}</span><span class="chip">${esc(c.power||"Power not listed")}</span></div><div class="card-actions"><button class="btn primary small" data-action="view" data-id="${esc(c.id)}">View details</button><button class="btn small" data-action="edit" data-id="${esc(c.id)}">Edit</button></div></div></article>`}).join(""):'<div class="empty">No cars match. Try another search or add a car below.</div>';
+ renderCompareOptions();
+}
+function renderParts(){$("partsGrid").innerHTML=partGuide.map(p=>`<article class="part-card"><div class="emoji">${p[0]}</div><h3>${esc(p[1])}</h3><p>${esc(p[2])}</p></article>`).join("")}
+function openDetails(id){
+ const c=cars.find(x=>x.id===id);if(!c)return;
+ $("dialogTitle").textContent=c.name;
+ const img=safeImage(c.image);
+ $("dialogBody").innerHTML=`${img?`<img class="dialog-image" src="${esc(img)}" alt="${esc(c.name)}">`:""}<div class="chips"><span class="chip">${esc(c.brand)}</span><span class="chip">${esc(c.category)}</span><span class="chip">${esc(c.engine)}</span><span class="chip">${esc(c.power||"Power not listed")}</span><span class="chip">${esc(c.speed||"Top speed not listed")}</span></div><p>${esc(c.description)}</p><h3>Parts & engineering notes</h3><div class="part-map"><div class="diagram" aria-label="Illustrative component map, not to scale"><svg class="car-silhouette" viewBox="0 0 420 170" role="img" aria-label="Stylized top-down car illustration"><path d="M82 54 Q100 35 140 32 L280 32 Q320 36 338 55 L365 72 L365 120 L337 137 Q315 150 280 151 L140 151 Q103 148 82 129 L55 113 L55 72Z" fill="#313b49" stroke="#8e9cab" stroke-width="3"/><path d="M130 49 L285 49 L312 68 L312 112 L285 133 L130 133 L103 112 L103 68Z" fill="#111820" stroke="#596777" stroke-width="2"/><rect x="20" y="67" width="55" height="18" rx="5" fill="#080a0d" stroke="#6b7785"/><rect x="20" y="106" width="55" height="18" rx="5" fill="#080a0d" stroke="#6b7785"/><rect x="345" y="67" width="55" height="18" rx="5" fill="#080a0d" stroke="#6b7785"/><rect x="345" y="106" width="55" height="18" rx="5" fill="#080a0d" stroke="#6b7785"/><path d="M143 56 L272 56 L293 73 L293 107 L272 126 L143 126 L122 107 L122 73Z" fill="#1e2834" stroke="#566474"/></svg>${[["engine","1"],["turbo","2"],["transmission","3"],["battery","4"],["brakes","5"],["suspension","6"]].map(([part,n])=>`<button class="pin" data-part="${part}" title="${part}" aria-label="${part}">${n}</button>`).join("")}</div><div><div class="diagram-list">${(c.parts||[]).map((p,i)=>`<button class="diagram-item" data-part-index="${i}"><b>${i+1}. ${esc(p[0])}</b><br><span class="notice">${esc(p[1])}</span></button>`).join("")}</div><div class="selected-note" id="selectedNote">Select a numbered point or part to read the notes. Diagram positions are illustrative, not a technical service diagram.</div></div></div><p class="notice">Specifications can vary by year, trim, region and measurement method. This site is for general learning, not repair instructions. Verify details with manufacturer or workshop documentation.</p>`;
+ $("dialogBody").querySelectorAll("[data-part-index]").forEach(btn=>btn.addEventListener("click",()=>{const p=c.parts[Number(btn.dataset.partIndex)];$("selectedNote").innerHTML=`<b>${esc(p[0])}</b><br>${esc(p[1])}`;$("dialogBody").querySelectorAll("[data-part-index]").forEach(b=>b.classList.remove("active"));btn.classList.add("active")}));
+ $("dialogBody").querySelectorAll(".pin").forEach(btn=>btn.addEventListener("click",()=>{const terms={engine:["engine"],turbo:["turbo"],transmission:["transmission","gearbox"],battery:["battery"],brakes:["brake"],suspension:["suspension","tyre","tire"]};const p=(c.parts||[]).find(x=>terms[btn.dataset.part].some(t=>x[0].toLowerCase().includes(t)))||(c.parts||[])[0];$("selectedNote").innerHTML=p?`<b>${esc(p[0])}</b><br>${esc(p[1])}`:"No notes added for this component.";}));
+ $("carDialog").showModal();
+}
+$("closeDialog").addEventListener("click",()=>$("carDialog").close());
+$("carDialog").addEventListener("click",e=>{if(e.target===$("carDialog"))$("carDialog").close()});
+$("carGrid").addEventListener("click",e=>{const b=e.target.closest("[data-action]");if(!b)return;if(b.dataset.action==="view")openDetails(b.dataset.id);if(b.dataset.action==="edit")fillForm(b.dataset.id)});
+["search","category","sort"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",renderCars));
+function renderCompareOptions(){
+ const oldA=$("compareA").value,oldB=$("compareB").value;
+ const opts=cars.map(c=>`<option value="${esc(c.id)}">${esc(c.name)}</option>`).join("");
+ $("compareA").innerHTML=opts;$("compareB").innerHTML=opts;
+ if(cars.some(c=>c.id===oldA))$("compareA").value=oldA;
+ if(cars.some(c=>c.id===oldB))$("compareB").value=oldB;
+ if(cars.length>1&&$("compareA").value===$("compareB").value)$("compareB").selectedIndex=1;
+ renderComparison();
+}
+function renderComparison(){
+ const a=cars.find(c=>c.id===$("compareA").value),b=cars.find(c=>c.id===$("compareB").value);
+ if(!a||!b){$("compareResult").innerHTML='<p class="notice">Add at least two cars to compare them.</p>';return}
+ const rows=[["Brand",a.brand,b.brand],["Category",a.category,b.category],["Engine / powertrain",a.engine,b.engine],["Power",a.power||"Not listed",b.power||"Not listed"],["Top speed",a.speed||"Not listed",b.speed||"Not listed"],["Description",a.description,b.description]];
+ $("compareResult").innerHTML=`<table class="compare-table"><thead><tr><th>Specification</th><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr></thead><tbody>${rows.map(r=>`<tr>${r.map((v,i)=>`<${i===0?"th":"td"}>${esc(v)}</${i===0?"th":"td"}>`).join("")}</tr>`).join("")}</tbody></table><p class="notice">Compare like-for-like model years and trims. Figures from different markets or test methods may not be directly comparable.</p>`;
+}
+$("compareA").addEventListener("change",renderComparison);$("compareB").addEventListener("change",renderComparison);
+function resetForm(){$("carForm").reset();$("editId").value="";$("formTitle").textContent="＋ Add a car to your collection";$("saveCarBtn").textContent="Save car";$("cancelEdit").classList.add("hidden")}
+function fillForm(id){const c=cars.find(x=>x.id===id);if(!c)return;$("editId").value=c.id;$("fName").value=c.name;$("fBrand").value=c.brand;$("fCategory").value=c.category;$("fEngine").value=c.engine;$("fPower").value=c.power||"";$("fSpeed").value=c.speed||"";$("fImage").value=c.image||"";$("fDescription").value=c.description;$("fParts").value=(c.parts||[]).map(p=>p[0]+": "+p[1]).join("\n");$("formTitle").textContent="✎ Edit "+c.name;$("saveCarBtn").textContent="Save changes";$("cancelEdit").classList.remove("hidden");$("editor").scrollIntoView({behavior:"smooth"})}
+$("cancelEdit").addEventListener("click",resetForm);
+$("carForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const id=$("editId").value||("car-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7));
+ const parts=$("fParts").value.split("\n").map(line=>{const i=line.indexOf(":");return i<0?[line.trim(),"Add a description for this part."]:[line.slice(0,i).trim(),line.slice(i+1).trim()]}).filter(p=>p[0]);
+ const existing=cars.find(c=>c.id===id);
+ const car={id,name:$("fName").value.trim(),brand:$("fBrand").value.trim(),category:$("fCategory").value,engine:$("fEngine").value.trim(),power:$("fPower").value.trim()||"Not listed",powerValue:Number(($("fPower").value.match(/\d+(?:\.\d+)?/)||[])[0])||0,speed:$("fSpeed").value.trim()||"Not listed",image:safeImage($("fImage").value.trim()),description:$("fDescription").value.trim(),parts};
+ if(existing)cars[cars.findIndex(c=>c.id===id)]=car;else cars.push(car);
+ persist();resetForm();renderCars();renderManageList();$("editor").scrollIntoView({behavior:"smooth"});
+});
+function renderManageList(){
+ $("manageList").innerHTML=cars.length?cars.map(c=>`<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--line)"><span><b>${esc(c.name)}</b><br><span class="notice">${esc(c.brand)} · ${esc(c.category)}</span></span><span style="display:flex;gap:7px"><button class="btn small" data-manage="edit" data-id="${esc(c.id)}">Edit</button><button class="btn small" data-manage="delete" data-id="${esc(c.id)}">Delete</button></span></div>`).join(""):'<p class="notice">No cars saved yet.</p>';
+}
+$("manageList").addEventListener("click",e=>{const b=e.target.closest("[data-manage]");if(!b)return;const c=cars.find(x=>x.id===b.dataset.id);if(!c)return;if(b.dataset.manage==="edit")fillForm(c.id);if(b.dataset.manage==="delete"&&confirm(`Delete ${c.name} from this browser's collection?`)){cars=cars.filter(x=>x.id!==c.id);persist();renderCars();renderManageList();resetForm()}});
+$("exportBtn").addEventListener("click",()=>{const blob=new Blob([JSON.stringify(cars,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="redline-garage-backup.json";a.click();URL.revokeObjectURL(url)});
+$("importFile").addEventListener("change",async e=>{const file=e.target.files[0];if(!file)return;try{const parsed=JSON.parse(await file.text());if(!Array.isArray(parsed)||!parsed.every(c=>c&&typeof c.name==="string"&&typeof c.brand==="string"&&typeof c.id==="string"))throw new Error("Format mismatch");if(!confirm("Replace the current browser collection with this imported backup? Export a backup first if needed."))return;cars=parsed;persist();renderCars();renderManageList();resetForm();alert("Backup imported into this browser.")}catch(err){alert("Could not import this file. Choose a valid Redline Garage JSON backup.")}finally{e.target.value=""}});
+renderCars();renderParts();renderManageList();
+</script>
+</body>
+</html>
